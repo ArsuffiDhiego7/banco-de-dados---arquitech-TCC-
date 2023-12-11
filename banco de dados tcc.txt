@@ -1,0 +1,23 @@
+create database bd_arquitech;
+
+create table Usuario (
+id int not null,
+Nome varchar (30) not null,
+Idade datetime,
+CPF varchar (20),
+Email varchar(30),
+Endereco varchar (30),
+primary key (id)
+);
+
+create table Cargo (
+id int not null,
+Arquiteto varchar (30),
+Cliente varchar (30),
+Engenheiro varchar (30),
+Construtor varchar (30),
+Marceneiro varchar (30),
+Pedreiro varchar (30),
+primary key (id),
+foreign key (id) references Usuario (id)
+);
